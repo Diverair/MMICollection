@@ -1,0 +1,593 @@
+/* Tout */
+html{
+    scroll-padding-top: 90px;
+}
+
+html::-webkit-scrollbar,
+.app::-webkit-scrollbar{
+    display: none;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    position: relative;
+}
+
+.app{
+    width: 100%;
+    margin: 0 auto;
+    height: max-content;
+}
+
+.contenu{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1400px;
+    height: max-content;
+    display: block;
+}
+
+
+
+/* Ordinateur */
+    /* Éléments cachés/affiché en fct de taille écran */
+        /* Affiché */
+        footer{
+            display: block;
+        }
+
+        /* Caché */
+            .tel,
+            .bouton-tel{
+                display: none;
+            }
+
+    /* header */
+    header{
+        width: calc(100% - 2 * 20px);
+        height: 50px;
+        min-width: 335px;
+        -webkit-backdrop-filter: blur(30px); /* assure la compatibilité avec safari */
+        backdrop-filter: blur(30px);
+        position: fixed;
+        z-index: 99;
+        top: 0;
+        left: 0;
+        display: flex;
+        padding: 0 20px;
+    }
+
+    header>*{
+        margin: 0 10px;
+    }
+
+    header>h1{
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    header>div{
+        position: relative;
+        height: 100%;
+        width: max-content;
+        margin: 0 5px;
+    }
+
+    header>div>a{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+    }
+
+    header>div>a>svg{
+        position: relative;
+        height: 28px;
+        width: auto;
+        margin: 11px 10px;
+    }
+
+    header>div:first-of-type>a>svg{
+        position: relative;
+        width: auto;
+        height: 36px;
+        margin: 7px 10px;
+    }
+
+    header>div.membre-header{
+        display: flex;
+
+    }
+
+    header>div.membre-header>a{
+        width: max-content;
+    }
+
+    header>div>a>img{
+        position: relative;
+        width: auto;
+        height: 36px;
+        margin: 7px 3px;
+    }
+
+    header>div>a>h5{
+        position: relative;
+        margin: 17px 5px 0 0;
+        height: max-content;
+    }
+
+
+    /* APP */
+    .haut-page{
+        text-align: center;
+        width: 100%;
+        height: max-content;
+    }
+
+    .haut-page>img{
+        width: 100%;
+        height: auto;
+    }
+
+    .presentation{
+        display: flex;
+        margin: 15px;
+    }
+
+    .presentation>img{
+        width: 40%;
+    }
+
+    .presentation-text{
+        width: calc(60% - 20px);
+        margin-left: 20px;
+    }
+
+    hr{
+        width: 50%;
+        height: 5px;
+        background-color: #BF5AA4;
+        border: #BF5AA4 1px solid;
+    }
+
+    .contenu{
+        text-align: center;
+    }
+
+    .section.accueil{
+        display: flex;
+        position: relative;
+        margin: 25px auto;
+        text-align: center;
+    }
+
+    .section.accueil>img{
+        position: relative;
+        z-index: 30;
+        left: 20%;
+        width: 40%;
+        min-width: 325px;
+        height: auto;
+    }
+
+    .section.accueil>.block-text{
+        width: 500px;
+        height: max-content;
+        padding: 10px;
+        text-align: left;
+        position: absolute;
+        z-index: 50;
+        margin: auto 0;
+        border-radius: 10px;
+        box-shadow: #54545440 0 0 15px;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-15%) translateY(-50%);
+    }
+
+    button{
+        width: max-content;
+        height: 45px;
+        padding: 0 10px;
+        border-radius: 10px;
+        border: #BF5AA4 solid 1px;
+        float: right;
+    }
+
+    button>a>svg{
+        vertical-align: top;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    /* Footer */
+    footer{
+        position: relative;
+        height: max-content;
+        width: 100%;
+    }
+
+    .text-footer{
+        display: flex;
+        width: 100%;
+        height: max-content;
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    .text-footer>*{
+        width: calc(100% / 3);
+        min-width: max-content;
+        height: max-content;
+        margin: 25px 0;
+    }
+
+    .text-footer>address>p{
+        margin: 0 0 12px;
+    }
+
+    .text-footer>address>a{
+        line-height: 25px;
+    }
+
+    .logo-reseaux-footer{
+        width: auto;
+        height: 37px;
+        margin: 0 0 10px 10px;
+    }
+
+    .logo-footer{
+        height: 125px;
+        width: auto;
+    }
+
+    .lien-footer{
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .text-footer>section>select,
+    #langue-select-tel{
+        border: 1px #FAFAFA solid;
+        border-radius: 4px;
+        padding: 5px;
+        background-color: #2F2F2F;
+    }
+
+    @media (max-width: 1700px) {
+        .text-footer{
+            margin: 0 50px;
+            width: calc(100% - 100px);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+/* Tablette */
+@media (min-width: 1113px) {
+    /* Éléments cachés/affiché en fct de taille écran */
+        /* Affiché */
+
+
+        /* Caché */
+        .bouton-menu-bar {
+            display: none;
+        }
+
+
+    /* Menu */
+    .menu {
+        display: block;
+        position: fixed;
+        z-index: 90;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        margin: 0;
+        padding: 0;
+        -webkit-backdrop-filter: blur(30px); /* assure la compatibilité avec safari */
+        backdrop-filter: blur(30px);
+    }
+
+    .menu>ul{
+        width: 50%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0;
+        display: flex;
+        text-align: center;
+    }
+
+    .menu>ul>li{
+        margin: 0 auto;
+        width: max-content;
+        text-align: center;
+        height: 100%;
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 1112px){
+    /* Éléments cachés/affiché en fct de taille écran */
+        /* Affiché */
+
+
+        /* Caché */
+        header>div>a>h5,
+        .fa-plus{
+            display: none;
+        }
+
+
+    /* Menu */
+    .bouton-menu{
+        width: 30px;
+        height: 20px;
+        top: 22px;
+        align-items: center;
+        justify-content: center;
+        z-index: 101;
+    }
+
+    .bouton-menu-bar,.bouton-menu-bar::before,.bouton-menu-bar::after{
+        content:"";
+        width: 100%;
+        height: 2px;
+        border-radius: 1px;
+        position: absolute;
+        left: 0;
+        z-index: 9999;
+        transition: all .4s ease-in-out;
+    }
+
+    .bouton-menu-bar::before{
+        top: -6px;
+    }
+
+    .bouton-menu-bar::after{
+        top: 6px;
+    }
+
+    .menu>ul{
+        padding: 0;
+        margin-top: 30px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .menu>ul>li{
+        margin: 20px;
+    }
+
+    .menu>ul>li>a:link{
+        text-decoration: none;
+    }
+
+    .menu>ul>li>a:visited{
+        text-decoration: none;
+    }
+
+    .menu{
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        display: flex;
+        transform: translateX(100vw);
+        transition: all 1s;
+        margin: 0;
+        -webkit-backdrop-filter: blur(30px); /* assure la compatibilité avec safari */
+        backdrop-filter: blur(30px);
+        z-index: 200;
+    }
+
+    .menu-open .menu{
+        transform: translateX(0);
+    }
+
+    .menu-open, .menu-open>body{
+        overflow: hidden;
+    }
+
+    .menu-open .bouton-menu-bar {
+        transform: rotate(135deg);
+    }
+
+    .menu-open .bouton-menu-bar::before, .menu-open .bouton-menu-bar::after{
+        transform: rotate(90deg);
+        top: 0;
+
+    }
+
+    /* APP */
+    .contenu{
+        width: calc(100% - 30px);
+        margin: 15px;
+    }
+
+    .section.accueil{
+        display: flex;
+        position: relative;
+        height: max-content;
+    }
+
+    .section.accueil>*{
+        position: relative;
+    }
+
+    .section.accueil>img{
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+
+    button{
+        position: relative;
+    }
+
+    .section.accueil>.block-text{
+        border-radius: 0;
+        box-shadow: none;
+        width: calc(100% - 20px);
+        position: relative;
+        left: 0;
+        top: 0;
+        transform: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Téléphone & tablette en portrait*/
+@media (max-width: 834px){
+    /* Éléments cachés/affiché en fct de taille écran */
+        /* Affiché */
+        header>div:first-of-type,
+        header>div.bouton-menu,
+        .tel,
+        .presentation,
+        .section.accueil,
+        .text-footer,
+        .bouton-tel{
+            display: block;
+        }
+
+
+        /* Caché */
+        header>div,
+        header>div>a>img,
+        .footer-centre,
+        .ordi,.footer-centre,
+        #langue-select,
+        .text-footer>label{
+            display: none;
+        }
+
+
+
+
+
+    /* Header */
+    header{
+        width: calc(100% - 10px);
+        min-width: 365px;
+        padding: 0 5px;
+    }
+
+    header>*{
+        position: relative;
+        width: 100%;
+    }
+
+
+
+
+
+    /* APP */
+    .haut-page{
+        margin-top: 50px;
+    }
+
+
+    .presentation>img{
+        width: 100%;
+    }
+
+    .presentation>div{
+        width: 100%;
+        margin: 0;
+    }
+
+
+
+
+
+
+
+    /* Footer */
+    footer{
+        padding: 25px 0;
+    }
+
+
+
+    .text-footer>*{
+        width: 100%;
+    }
+
+    .footer-gauche{
+        margin: 0;
+    }
+
+
+
+    .footer-droit{
+        display: flex;
+        width: 100%;
+    }
+
+    .footer-droit>*{
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-droit>label,
+    .footer-droit>label{
+        width: 0;
+        margin: 0;
+    }
+
+    .footer-droit>div>a>svg{
+        margin: 0 10px;
+    }
+
+    .logo-reseaux-footer{
+        width: 40px;
+        height: auto;
+    }
+
+
+
+    .lien-footer{
+        width: calc(100% - 30px);
+        margin: 0 15px;
+    }
+
+    .text-footer>address>p{
+        margin: 0;
+    }
+
+    .bouton-tel{
+        width: 100%;
+        text-align: center;
+    }
+}
