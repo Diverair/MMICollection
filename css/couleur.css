@@ -1,197 +1,220 @@
-@media (prefers-color-scheme: dark){
-    /* Police */
-    h1{
-        color: #fff;
-    }
-
-    h2{
-        color: #F2F2F2;
-    }
-
-    h3{
-        color: #DDDDDD;
-    }
-
-    h4,
-    h5,    
-    p,
-    a,
-    span,
-    i{
-        color: #FAFAFA;
-    }
-
-    h6{
-        color: #ACACAC;
-    }
-
-    .bouton-menu-bar,.bouton-menu-bar::before,.bouton-menu-bar::after,
-    .menu-open .bouton-menu-bar,
-    .menu-open .bouton-menu-bar::before, .menu-open .bouton-menu-bar::after{
-        background-color: #CACACA;
-    }
-
-    /* Background-color */
-    .fond{
-        background-color: #121212;
-    }
-
-    .section.accueil>.block-text{
-        background-color: #656565;
-    }
-
-    @media (max-width: 1112px) {
-    .section.accueil>.block-text{
-        background-color: #00000000;
-    }
-}
-
-    .color-objet{
-        fill: #CACACA;
-        stroke: #CACACA;
-    }
-
-    .color-objet-fill{
-        fill: #CACACA;
-    }
-
-    .color-objet-stroke{
-        stroke: #CACACA;
-    }
-
-    header,
-    footer,
-    .menu{
-        background-color: rgba(20, 20, 20, 0.7);
-    }
-
-    @media (min-width: 1113px) {
-        .menu{
-            background-color: rgba(70, 70, 70, 1);
+/* Thème Sombre */
+    @media (prefers-color-scheme: dark){
+        /* Police */
+        h1{
+            color: #fff;
         }
-    }
-}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (prefers-color-scheme: light){
-    /* Police */
-    h1{
-        color: #000;
-    }
-
-    h2{
-        color: #080808;
-    }
-
-    h3{
-        color: #333333;
-    }
-
-    h4,
-    h5,
-    h6,    
-    p,
-    a,
-    span,
-    i{
-        color: #060606;
-    }
-
-    h6{
-        color: #545454;
-    }
-
-    /* Background-color */
-    .fond{
-        background-color: #FBFBFB;
-    }
-
-    .section.accueil>.block-text{
-        background-color: #EFEFEF;
-    }
-
-    @media (max-width: 1112px) {
-        .section.accueil>.block-text {
-            background-color: #00000000;
+        h2{
+            color: #F2F2F2;
         }
-    }
 
-    .color-objet{
-        fill: #353525;
-        stroke: #353535;
-    }
-
-    .color-objet-fill{
-        fill: #353525;
-    }
-
-    .color-objet-stroke{
-        stroke: #353535;
-        fill: none;
-    }
-
-    .bouton-menu-bar,.bouton-menu-bar::before,.bouton-menu-bar::after,
-    .menu-open .bouton-menu-bar,
-    .menu-open .bouton-menu-bar::before, .menu-open .bouton-menu-bar::after{
-        background-color: #353535;
-    }
-
-    header,
-    .menu{
-        background-color: rgba(203, 203, 203, 0.7);
-    }
-
-    @media (min-width: 1113px) {
-        .menu{
-            background-color: rgba(243, 243, 243, 1);
+        h3{
+            color: #DDDDDD;
         }
+
+        h4,
+        h5,
+        p,
+        a,
+        span,
+        i{
+            color: #FAFAFA;
+        }
+
+        h6{
+            color: #ACACAC;
+        }
+
+
+        /* Background-color */
+            .fond{
+                background-color: #121212;
+            }
+
+            .section.accueil>.block-text{
+                background-color: #656565;
+            }
+
+            .bouton-menu-bar,.bouton-menu-bar::before,.bouton-menu-bar::after,
+            .menu-open .bouton-menu-bar,
+            .menu-open .bouton-menu-bar::before, .menu-open .bouton-menu-bar::after{
+                background-color: #CACACA;
+            }
+
+            header,
+            footer,
+            .menu{
+                background-color: rgba(20, 20, 20, 0.7);
+            }
+
+            @media (max-width: 1112px) {
+                .section.accueil>.block-text{
+                background-color: #00000000;
+            }
+            }
+
+            @media (min-width: 1113px) {
+                .menu{
+                    background-color: rgba(70, 70, 70, 1);
+                }
+            }
+
+
+        /* SVG */
+            .color-objet{
+                fill: #CACACA;
+                stroke: #CACACA;
+            }
+
+            .color-objet-fill{
+                fill: #CACACA;
+            }
+
+            .color-objet-stroke{
+                stroke: #CACACA;
+            }
+
+
+
+
     }
-}
 
-footer{
-    background-color: #2F2F2F;
-}
 
-footer>div>section>div>a,
-footer>div>address>p,
-footer>div>address>a,
-footer>div>section>select,
-#langue-select-tel,
-footer>div>a{
-    color: #FAFAFA;
-}
 
-.color-objet-stroke-footer{
-    stroke: #FAFAFA;
-}
 
-.text-footer>section>select{
-    background-color: rgba(0,0,0,0);
-}
 
-button{
-    background-color: #BF5AA4;
-}
-button>a{
-    color: #FAFAFA;
-}
 
-.flechebouton{
+
+
+
+
+/* Theme Clair */
+    @media (prefers-color-scheme: light){
+        /* Police */
+            h1{
+                color: #000;
+            }
+
+            h2{
+                color: #080808;
+            }
+
+            h3{
+                color: #333333;
+            }
+
+            h4,
+            h5,
+            h6,
+            p,
+            a,
+            span,
+            i{
+                color: #060606;
+            }
+
+            h6{
+                color: #545454;
+            }
+
+        /* Background-color */
+            .fond{
+                background-color: #FBFBFB;
+            }
+
+            .section.accueil>.block-text{
+                background-color: #EFEFEF;
+            }
+
+            .bouton-menu-bar,.bouton-menu-bar::before,.bouton-menu-bar::after,
+            .menu-open .bouton-menu-bar,
+            .menu-open .bouton-menu-bar::before, .menu-open .bouton-menu-bar::after{
+                background-color: #353535;
+            }
+
+            header,
+            .menu{
+                background-color: rgba(203, 203, 203, 0.7);
+            }
+
+            @media (max-width: 1112px) {
+                .section.accueil>.block-text {
+                    background-color: #00000000;
+                }
+            }
+
+            @media (min-width: 1113px) {
+                .menu{
+                    background-color: rgba(243, 243, 243, 1);
+                }
+            }
+
+
+        /* SVG */
+            .color-objet{
+                fill: #353525;
+                stroke: #353535;
+            }
+
+            .color-objet-fill{
+                fill: #353525;
+            }
+
+            .color-objet-stroke{
+                stroke: #353535;
+                fill: none;
+            }
+    }
+
+
+
+
+
+
+
+
+
+
+/* Tout thème */
+    /* Footer */
+        footer{
+            background-color: #2F2F2F;
+        }
+
+        footer>div>section>div>a,
+        footer>div>address>p,
+        footer>div>address>a,
+        footer>div>section>select,
+        #langue-select-tel,
+        footer>div>a{
+            color: #FAFAFA;
+        }
+
+        .color-objet-stroke-footer{
+            stroke: #FAFAFA;
+        }
+
+        .text-footer>section>select,
+        #langue-select-tel{
+            border: 1px #FAFAFA solid;
+            background-color: #2F2F2F;
+        }
+
+
+    /* Autre élément */
+        button{
+            background-color: #BF5AA4;
+        }
+        button>a{
+            color: #FAFAFA;
+        }
+
+        .flechebouton{
     fill: #FAFAFA;
 }
 
-
-
-
+        hr{
+            background-color: #BF5AA4;
+            border: #BF5AA4 1px solid;
+        }
