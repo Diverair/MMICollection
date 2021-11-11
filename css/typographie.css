@@ -71,7 +71,7 @@
 }
 
 
-/* Écriture */
+/* Font-Size */
     h1{
         font-size: 24px;
     }
@@ -80,8 +80,27 @@
         font-size: 44px;
     }
 
+   .filtres>h5{
+        font-size: 34px;
+    }
+
+    h6{
+        font-size: 28px;
+    }
+
     button>a{
         font-size: 24px;
+    }
+
+    @media (min-width: 1112px) {
+        .presentation>div>h2{
+            font-size: 54px;
+            margin-top: 0;
+        }
+
+        .presentation>div>p{
+            font-size: 24px;
+        }
     }
 
 

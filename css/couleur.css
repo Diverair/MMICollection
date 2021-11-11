@@ -32,7 +32,8 @@
                 background-color: #121212;
             }
 
-            .section.accueil>.block-text{
+            .section.accueil>.block-text,
+            .contenu>.choix>a{
                 background-color: #656565;
             }
 
@@ -74,10 +75,6 @@
             .color-objet-stroke{
                 stroke: #CACACA;
             }
-
-
-
-
     }
 
 
@@ -123,7 +120,8 @@
                 background-color: #FBFBFB;
             }
 
-            .section.accueil>.block-text{
+            .section.accueil>.block-text,
+            .contenu>.choix>a{
                 background-color: #EFEFEF;
             }
 
@@ -176,7 +174,7 @@
 
 
 
-/* Tout thème */
+/* Tous thème */
     /* Footer */
         footer{
             background-color: #2F2F2F;
@@ -217,4 +215,27 @@
         hr{
             background-color: #BF5AA4;
             border: #BF5AA4 1px solid;
+        }
+
+        input[type="checkbox"]:checked{
+            background-color: #BF5AA4;
+        }
+
+        hr.hr-simple{
+            background-color: #707070;
+            border: 0;
+        }
+
+        .filtres{
+            border-right:  #707070 1px solid;
+        }
+
+        .filtres>h5,
+        .categorie-filtres,
+        .barre-info.ordi{
+            border-bottom: #707070 1px solid;
+        }
+
+        .categorie-filtres:last-of-type{
+            border-bottom: none;
         }
