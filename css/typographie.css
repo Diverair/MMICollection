@@ -39,23 +39,17 @@
         text-align: left;
     }
 
-
-
-    .footer-centre{
+    .footer-centre,
+    .menu>ul>li,
+    .text-center>*{
         text-align: center;
     }
 
-    .footer-droit{
-        text-align: right;
-    }
-
-    .menu>ul>li{
-        text-align: center;
-    }
-
+    .footer-droit,
     h5{
         text-align: right;
     }
+
 
 /* Autre */
     li{
@@ -80,12 +74,20 @@
         font-size: 44px;
     }
 
+    h3{
+        font-size: 28px;
+    }
+
    .filtres>h5{
         font-size: 34px;
     }
 
     h6{
         font-size: 28px;
+    }
+
+    .presentation.page-projet>div>p{
+        font-size: 16px;
     }
 
     button>a{

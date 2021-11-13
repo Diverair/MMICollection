@@ -17,14 +17,17 @@
         h5,
         p,
         a,
-        span,
-        i{
+        span{
             color: #FAFAFA;
         }
 
-        h6{
+        h6,
+        i{
             color: #ACACAC;
         }
+
+
+
 
 
         /* Background-color */
@@ -33,7 +36,8 @@
             }
 
             .section.accueil>.block-text,
-            .contenu>.choix>a{
+            .contenu>.choix>a,
+            .carrousel>li>p{
                 background-color: #656565;
             }
 
@@ -51,8 +55,8 @@
 
             @media (max-width: 1112px) {
                 .section.accueil>.block-text{
-                background-color: #00000000;
-            }
+                    background-color: #00000000;
+                }
             }
 
             @media (min-width: 1113px) {
@@ -60,6 +64,21 @@
                     background-color: rgba(70, 70, 70, 1);
                 }
             }
+
+
+
+
+
+        /* Box-shadow */
+            .contenu>.choix>a:hover,
+            .section.accueil>.block-text,
+            .visuel-projet,
+            .carrousel>li>p{
+                box-shadow: #545454 0 0 10px;
+            }
+
+
+
 
 
         /* SVG */
@@ -111,9 +130,14 @@
                 color: #060606;
             }
 
-            h6{
+            h6,
+            .presentation.page-projet>div>i{
                 color: #545454;
             }
+
+
+
+
 
         /* Background-color */
             .fond{
@@ -121,7 +145,8 @@
             }
 
             .section.accueil>.block-text,
-            .contenu>.choix>a{
+            .contenu>.choix>a,
+            .carrousel>li>p{
                 background-color: #EFEFEF;
             }
 
@@ -147,6 +172,21 @@
                     background-color: rgba(243, 243, 243, 1);
                 }
             }
+
+
+
+
+
+        /* Box-shadow */
+            .contenu>.choix>a:hover,
+            .section.accueil>.block-text,
+            .visuel-projet,
+            .carrousel>li>p{
+                box-shadow: #545454 0 0 15px;
+            }
+
+
+
 
 
         /* SVG */
@@ -204,20 +244,22 @@
         button{
             background-color: #BF5AA4;
         }
+
         button>a{
             color: #FAFAFA;
         }
 
         .flechebouton{
-    fill: #FAFAFA;
-}
+            fill: #FAFAFA;
+        }
 
         hr{
             background-color: #BF5AA4;
             border: #BF5AA4 1px solid;
         }
 
-        input[type="checkbox"]:checked{
+        input[type="checkbox"]:checked,
+        nav{
             background-color: #BF5AA4;
         }
 
