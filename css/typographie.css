@@ -35,13 +35,17 @@
     }
 
 /* Positionnement texte */
-    address{
+    address,
+    .corps-page.mentions-legales,
+    hr.mini{
         text-align: left;
     }
 
     .footer-centre,
     .menu>ul>li,
-    .text-center>*{
+    .text-center>*,
+    .corps-page.mentions-legales>section>h2,
+    .corps-page.mentions-legales>section>h3{
         text-align: center;
     }
 
@@ -55,6 +59,14 @@
     li{
         list-style-type: none;
     }
+
+    .corps-page.mentions-legales>section>ul>li,
+    .corps-page.mentions-legales>section>ul>li>ul>li{
+        list-style-type: circle;
+    }
+
+
+
 
 
 @media (max-width: 1112px) {

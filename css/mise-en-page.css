@@ -456,6 +456,30 @@
 
 
 
+            /* Mentions légales */
+                .corps-page.mentions-legales{
+                    width: calc(100% - 50px);
+                    margin: 0 auto;
+                }
+
+                .corps-page.mentions-legales>section>hr{
+                     margin-top: 50px;
+                }
+
+                .corps-page.mentions-legales>section>hr.mini{
+                    width: 80px;
+                    height: 5px;
+                    margin: 0;
+                }
+
+                .corps-page.mentions-legales>section>h4{
+                    margin: 35px 0 5px;
+                }
+
+
+
+
+
 
     /* Footer */
         footer{
@@ -543,7 +567,7 @@
 
 
         /* Menu */
-            .menu {
+            .menu{
                 display: block;
                 position: fixed;
                 z-index: 90;

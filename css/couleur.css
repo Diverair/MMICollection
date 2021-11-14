@@ -22,7 +22,8 @@
         }
 
         h6,
-        i{
+        i,
+        b{
             color: #ACACAC;
         }
 
@@ -125,13 +126,13 @@
             h6,
             p,
             a,
-            span,
-            i{
+            span{
                 color: #060606;
             }
 
             h6,
-            .presentation.page-projet>div>i{
+            i,
+            b{
                 color: #545454;
             }
 
