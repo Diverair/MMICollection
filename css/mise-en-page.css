@@ -41,23 +41,25 @@
 
 /* Ordinateur */
     /* Éléments cachés/affiché en fct de taille écran */
-        /* Affiché */
-        footer{
-            display: block;
-        }
-
         /* Caché */
             .tel,
             .tablette,
-            .bouton-tel{
+            .bouton-tel,
+            .cacher{
                 display: none;
+            }
+
+        /* Affiché */
+            footer,
+            .ordi{
+                display: block;
             }
 
 
 
 
 
-    /* header */
+/* header */
         header{
             width: calc(100% - 2 * 20px);
             height: 50px;
@@ -130,6 +132,48 @@
             margin: 17px 5px 0 0;
             height: max-content;
         }
+
+        /* Connexion */
+            #connexion{
+                position: absolute;
+                width: 100vw;
+                height: 100vh;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: 0;
+                padding: 0;
+                z-index: 9999;
+                -webkit-backdrop-filter: blur(30px); /* assure la compatibilité avec safari */
+                backdrop-filter: blur(30px);
+            }
+
+            .cadre-connexion{
+                border-radius: 30px;
+                width: 300px;
+                height: max-content;
+                padding: 25px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateY(-50%) translateX(-50%);
+            }
+
+            .cadre-connexion>img{
+                width: auto;
+                height: 10%;
+                margin: 0;
+                padding: 0;
+            }
+
+            .cadre-connexion>div>button,
+            .inscription>button{
+                float: none;
+                margin: 20px auto;
+            }
+
+
 
 
 
@@ -225,6 +269,10 @@
 
 
         /* Accueil */
+            .haut-page.accueil{
+                margin-top: 90px;
+            }
+
             .section.accueil{
                 display: flex;
                 position: relative;
@@ -379,7 +427,6 @@
                     margin: 0;
                 }
 
-
                 .section-projet{
                     width: 100%;
                     margin: 0 ;
@@ -481,11 +528,38 @@
 
 
 
+            /* Inscription */
+                .haut-page.inscription{
+                    margin-top: 100px;
+                }
+
+                .inscription>section{
+                    width: 300px;
+                    height: max-content;
+                    padding: 0 0 5px;
+                    border-radius: 5px;
+                    border: #545454 3px solid;
+                    position: relative;
+                    margin: 10px auto ;
+                }
+
+                .inscription>section>label{
+                    position: absolute;
+                    top: -10px;
+                    left: 10px;
+                    padding: 0 5px;
+                }
+
+
+
+
+
     /* Footer */
         footer{
             position: relative;
             height: max-content;
             width: 100%;
+            bottom: 0;
         }
 
         .text-footer{
@@ -602,9 +676,9 @@
     @media (max-width: 1112px){
         /* Éléments cachés/affiché en fct de taille écran */
             /* Affiché */
-            .tablette{
-                display: block;
-            }
+                .tablette{
+                    display: block;
+                }
 
             /* Caché */
                 header>div>a>h5,
@@ -937,7 +1011,8 @@
 
     /* APP */
         /* Généraux */
-            .haut-page{
+            .haut-page,
+            .haut-page.accueil{
                 margin-top: 50px;
             }
 

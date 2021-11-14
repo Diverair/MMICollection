@@ -45,7 +45,8 @@
     .menu>ul>li,
     .text-center>*,
     .corps-page.mentions-legales>section>h2,
-    .corps-page.mentions-legales>section>h3{
+    .corps-page.mentions-legales>section>h3,
+    .cadre-connexion{
         text-align: center;
     }
 
@@ -54,6 +55,12 @@
         text-align: right;
     }
 
+    @media (max-width: 834px) {
+        .footer-droit>div{
+            text-align: center;
+        }
+
+    }
 
 /* Autre */
     li{
