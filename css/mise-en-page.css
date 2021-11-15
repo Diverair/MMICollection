@@ -134,7 +134,8 @@
         }
 
         /* Connexion */
-            #connexion{
+            #connexion,
+            #visuels-projet-grand{
                 position: absolute;
                 width: 100vw;
                 height: 100vh;
@@ -147,6 +148,7 @@
                 z-index: 9999;
                 -webkit-backdrop-filter: blur(30px); /* assure la compatibilité avec safari */
                 backdrop-filter: blur(30px);
+                overflow: hidden;
             }
 
             .cadre-connexion{
@@ -178,6 +180,49 @@
             .inscription>button{
                 float: none;
                 margin: 20px auto;
+            }
+
+        /* Visuel projet en grand */
+            #visuels-projet-grand>img{
+                width: 75%;
+                height: auto;
+                position: absolute;
+                top: 45%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                border-radius: 35px;
+            }
+
+            #visuels-projet-grand>ul{
+                position: absolute;
+                bottom: 0;
+                width: calc(100% - 200px);
+                height: max-content;
+                padding: 0 100px;
+                margin: 0 auto;
+                overflow-x: scroll;
+                transform: translateY(50%);
+                -webkit-backdrop-filter: blur(30px); /* assure la compatibilité avec safari */
+                backdrop-filter: blur(30px);
+            }
+
+            #visuels-projet-grand>ul:hover{
+                transform: translateY(25px);
+            }
+
+            #visuels-projet-grand>ul>li{
+                margin: 25px;
+            }
+
+            #visuels-projet-grand>ul>li>img{
+                width: 100%;
+                min-width: 190px;
+                height: auto;
+                border-radius: 10px;
+            }
+
+            #visuels-projet-grand>ul>li>img:hover{
+                transform: scale(1.2);
             }
 
 
