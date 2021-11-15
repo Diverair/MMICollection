@@ -594,6 +594,20 @@
 
 
 
+            /* Vote */
+                .bouton-vote{
+                    margin: 25px;
+                }
+
+                .scroll-snap.ul-vote{
+                    margin-bottom: 110px;
+                }
+
+
+
+
+
+
             /* Mentions légales */
                 .corps-page.mentions-legales{
                     width: calc(100% - 50px);
