@@ -262,6 +262,10 @@
 
 
     /* Autre élément */
+        .fond-avatar{
+            background-color: #FAFAFA;
+        }
+
         button{
             background-color: #BF5AA4;
         }

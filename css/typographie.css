@@ -37,7 +37,8 @@
 /* Positionnement texte */
     address,
     .corps-page.mentions-legales,
-    hr.mini{
+    hr.mini,
+    .inscription>section{
         text-align: left;
     }
 
@@ -59,7 +60,6 @@
         .footer-droit>div{
             text-align: center;
         }
-
     }
 
 /* Autre */

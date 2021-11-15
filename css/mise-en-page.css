@@ -161,10 +161,17 @@
             }
 
             .cadre-connexion>img{
-                width: auto;
-                height: 10%;
+                width: 140px;
+                height: 140px;
                 margin: 0;
                 padding: 0;
+            }
+
+            .cadre-connexion>div>input{
+                border-radius: 5px;
+                margin: 5px 0;
+                border: none;
+                padding: 5px;
             }
 
             .cadre-connexion>div>button,
@@ -174,6 +181,45 @@
             }
 
 
+        /* Compte */
+            .profil{
+                width: 100%;
+                display: flex;
+                margin: 90px 0 50px;
+            }
+
+            .image-avatar{
+                position: relative;
+                width: 50%;
+            }
+
+            .banniere{
+                width: 100%;
+                height: auto;
+            }
+
+            .fond-avatar{
+                width: 120px;
+                height: 120px;
+                position: absolute;
+                bottom: 5px;
+                right: 5px;
+                border-radius: 60px;
+            }
+
+            .fond-avatar>.avatar{
+                width: 120px;
+                height: 120px;
+            }
+
+            .Nom-utilisateur{
+                margin: 5px 0 20px;
+            }
+
+            .profil-desc{
+                width: calc(50% - 50px);
+                margin: 0 25px;
+            }
 
 
 
@@ -506,7 +552,7 @@
             /* Mentions légales */
                 .corps-page.mentions-legales{
                     width: calc(100% - 50px);
-                    margin: 0 auto;
+                    margin: 110px auto 0;
                 }
 
                 .corps-page.mentions-legales>section>hr{
@@ -534,7 +580,8 @@
                 }
 
                 .inscription>section{
-                    width: 300px;
+                    width: 80%;
+                    max-width: 950px;
                     height: max-content;
                     padding: 0 0 5px;
                     border-radius: 5px;
@@ -550,8 +597,68 @@
                     padding: 0 5px;
                 }
 
+                .inscription>section>input,
+                .inscription>section>select{
+                    border: none;
+                    background-color: #00000000;
+                    width: calc(100% - 20px);
+                    height: max-content;
+                    margin: 0 10px;
+                }
+
+                .inscription>section>i{
+                    margin: 0 10px 10px 10px;
+                }
+
+                .inscription>.no-border{
+                    border: none;
+                    display: flex;
+                }
+
+                .inscription>.no-border>input{
+                    position: relative;
+                    margin: auto 0;
+                    width: max-content;
+                }
+
+                .inscription>.no-border>i{
+                    margin: 0 0 0 20px;
+                }
+
+                #message{
+                    height: max-content;
+                    min-height: 100px;
+                }
+
+                #message::placeholder{
+                    top: 0;
+                }
 
 
+
+
+
+            /* Contact */
+                .reseaux-contact{
+                    text-align: center;
+                }
+
+                .logo-reseaux-contact{
+                    width: 75px;
+                    margin: 10px 25px;
+                }
+
+                .carrousel.contact{
+                    position: relative;
+                    margin: 20px auto;
+                    width: max-content;
+                    padding: 0;
+                    overflow-x: hidden;
+                }
+
+                .carrousel.contact>div{
+                    margin: 0 25px;
+                }
 
 
     /* Footer */
@@ -607,7 +714,6 @@
             border-radius: 4px;
             padding: 5px;
         }
-
 
         @media (max-width: 1700px) {
             .text-footer{
@@ -865,7 +971,6 @@
                         width: 100%;
                         height: max-content;
                         margin: 0;
-
                     }
 
                     .nav>ul{
@@ -878,6 +983,7 @@
 
                     .nav>ul>li{
                         margin: 0 60px;
+
                         padding: 0;
                     }
 
@@ -949,6 +1055,11 @@
                     .carrousel>li>a>img.visuel-projet{
                         width: 100%;
                         height: auto;
+                    }
+
+                /* Compte */
+                    .profil{
+                        margin: 50px 0 50px;
                     }
     }
 
