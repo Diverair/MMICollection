@@ -1,0 +1,269 @@
+/* Carte projet*/
+.contenu{
+    width: calc(4 * 300px + 3 * 25px);
+    padding: 25px 0;
+    text-align: center;
+    margin: auto;
+}
+
+.contenu>.choix,
+.barre-info.ordi{
+    width: calc(4 * 300px + 3 * 25px);
+    height: max-content;
+}
+
+.contenu>.choix{
+    display: grid;
+    grid: auto-flow max-content / repeat(4, 300px);
+    grid-gap: 25px;
+    margin: auto;
+}
+
+.carrousel>.choix{
+    display: grid;
+    width: 300px;
+    height: max-content;
+}
+
+.contenu.contenu-accueil>.choix{
+    width: calc(4 * 300px + 3 * 25px);
+    height: max-content;
+    display: grid;
+    grid: auto-flow max-content / repeat(4, 300px);
+    grid-gap: 25px;
+    padding: 25px 0;
+    margin: auto;
+}
+
+.contenu.contenu-accueil{
+    width: calc(4 * 300px + 3 * 25px);
+    padding: 0 25px;
+    text-align: center;
+    margin: auto;
+}
+
+.choix>a{
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+
+@media (max-width : 400px) {
+    .choix>a{
+        transform: translateX(-9%);
+
+    }
+}
+
+.contenu.contenu-accueil>section>a>div{
+    height: 50%;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.choix>a>div{
+    height: 185px;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    text-align: left;
+}
+
+.contenu.contenu-accueil>section>a>div{
+    text-align: center;
+}
+
+.contenu.contenu-accueil>section>a>div:last-of-type{
+    padding: 20px 0;
+    margin: 0;
+    height: 26%;
+    width: 100%;
+}
+
+.choix>a>div:last-of-type{
+    padding: 15px;
+    width: calc(100% - 30px);
+    height: 175px;
+}
+
+
+.choix>a>div>img.visuel{
+    max-height: 110%;
+    min-height: 100%;
+    min-width: 100%;
+    box-sizing: inherit;
+    border-radius: 20px 20px 0 0;
+    transition: transform 0.2s;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.choix>a:hover>div>img.visuel{
+    transform-origin: center;
+    transform: scale(1.15) translateX(-45%) translateY(-45%);
+}
+
+.choix>a>div>h6{
+    width: 100%;
+    margin: 0;
+}
+
+
+
+
+@media (max-width: 1617px) {
+    .contenu{
+        width: calc(3 * 300px + 2 * 25px);
+        padding: 0;
+        text-align: center;
+        margin: 0;
+    }
+    
+    
+    
+    
+    /* Carte projet*/
+    .contenu>.choix,
+    .barre-info.ordi{
+        width: calc(3 * 300px + 2 * 25px);
+        height: max-content;
+    }
+
+    .contenu>.choix{
+        display: grid;
+        grid: auto-flow max-content / repeat(3, 300px);
+        grid-gap: 25px;
+        padding: 25px 0;
+        margin: 0;
+    }
+}
+
+@media (max-width: 1183px) {
+    .contenu{
+        width: calc(2 * 300px + 1 * 25px);
+        text-align: center;
+    }
+    
+    
+    
+    
+    /* Carte projet*/
+    .contenu>.choix,
+    .barre-info.ordi{
+        width: calc(2 * 300px + 1 * 25px);
+        height: max-content;
+    }
+    
+    .contenu>.choix{
+        display: grid;
+        grid: auto-flow max-content / repeat(2, 300px);
+        grid-gap: 25px;
+        padding: 25px 0;
+        margin: 0 auto;
+    }
+}
+
+
+@media (max-width: 873px) {
+    .contenu{
+        width: calc(100% - 50px);
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    
+    
+    
+    /* Carte projet*/
+    .contenu>.choix{
+        width: 300px;
+        height: max-content;
+        display: grid;
+        grid: auto-flow max-content / 300px;
+        padding: 25px 0;
+    }
+
+    .barre-info.ordi{
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 1324px) {
+    .contenu.contenu-accueil{
+        width: calc(3 * 300px + 2 * 25px);
+        padding: 0 25px;
+        text-align: center;
+        margin: auto;
+    }
+    
+    
+    
+    
+    /* Carte projet*/
+    .contenu.contenu-accueil>.choix{
+        width: calc(3 * 300px + 2 * 25px);
+        height: max-content;
+        display: grid;
+        grid: auto-flow max-content / repeat(3, 300px);
+        grid-gap: 25px;
+        padding: 25px 0;
+        margin: auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .contenu.contenu-accueil{
+        width: calc(2 * 300px + 1 * 25px);
+        padding: 0 25px;
+        text-align: center;
+        margin: auto;
+    }
+    
+    
+    
+    
+    /* Carte projet*/
+    .contenu.contenu-accueil>.choix{
+        width: calc(2 * 300px + 1 * 25px);
+        height: max-content;
+        display: grid;
+        grid: auto-flow max-content / repeat(2, 300px);
+        grid-gap: 25px;
+        padding: 25px 0;
+        margin: auto;
+    }
+}
+
+
+@media (max-width: 699px) {
+    .contenu.contenu-accueil{
+        width: calc(100% - 50px);
+        text-align: center;
+        margin: auto;
+    }
+    
+    
+    
+    
+    /* Carte projet*/
+    .contenu.contenu-accueil>.choix{
+        width: 300px;
+        height: max-content;
+        display: grid;
+        grid: auto-flow max-content / 300px;
+        padding: 25px 0;
+        margin: auto;
+    }
+}
+
+
+
+
+
