@@ -27,9 +27,9 @@
             <img src="../../static/css/images/AjoutProjet.jpg" alt="Lien pour aller sur l'ajout d'un projet">
             <p>Il vous reste plus qu'à rentrer les différents champs nécessaires pour créer votre projet et le mettre en ligne en utilsiant le bouton <span class="blue">Publier</span>.</p>
             <img src="../../static/css/images/Projet1.jpg" alt="remplir les différents champs acf du projet">
-            <img src="../../static/css/images/Projet2.jpg" alt="remplir les différents champs acf du projet">
-            <img src="../../static/css/images/Projet3.jpg" alt="remplir les différents champs acf du projet">
-            <p>Félicitation, vous venez de mettre en ligne votre projet. n'hésite pas à aller voir s'il tu le retrouves bien sur la page de tout les <i><router-link class="pink" to="/projets">Projets</router-link></i>.</p>
+            <img src="../../static/css/images/Projet2.png" alt="remplir les différents champs acf du projet">
+            <img src="../../static/css/images/Projet3.png" alt="remplir les différents champs acf du projet">
+            <p>Félicitation, vous venez de mettre en ligne votre projet. n'hésitez pas à aller voir s'il vous le retrouves bien sur la page de tout les <i><router-link class="pink" to="/projets">Projets</router-link></i>.</p>
         </div>
     
     

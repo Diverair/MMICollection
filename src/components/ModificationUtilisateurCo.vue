@@ -2,12 +2,12 @@
 <template>
 <div class="app fond">
     <form class="haut-page inscription page-inscription" @submit.prevent="modif" enctype="multipart/form-data">
-        <h2>Inscription</h2>
+        <h2>Modifier son compte</h2>
         <section>
-            <i class="pink">* La validation des conditions générales d'utilisation sont obligatoire pour s'inscrire.</i>
+            <i class="pink">* Obligatoire.</i>
             <br>
             <i class="pink">** <router-link to="/contact">Contactez</router-link> un administrateur pour modifier ces champs.</i>
-        </section>
+        </section> 
         <section>
             <label for="inscription-prenom">Votre Prénom<i class="pink">*</i></label>
             <br><input type="text" id="inscription-prenom" placeholder="Prénom" v-model="Membre.acf.prenom" required>
@@ -31,7 +31,6 @@
         <section>
             <br><label for="avatar">Avatar</label>
             <div  class="previsualisationAvatar">
-                <img src="" alt="">
                 <img :src="avatarData" class="preview" alt="Previsualisation de l'avatar">
             </div>
             <i>Taille 1/1</i>
@@ -82,6 +81,9 @@
             <p>Vous n'avez pas encore de compte ? <a href="http://backmmicollection.raphaelbonin.fr/wp-login.php?action=register"><i>S'inscrire</i></a></p>
         </section>
 
+        <div v-if="message != null">
+            <i class="pink">{{message}}</i>
+        </div>
 
         <br>
         <button class="red">
@@ -120,7 +122,7 @@
                         specialite: {},
                         promo: {},
                         banniere: null,
-                        logo: null
+                        logo: null,
                     }
                 },
                 utilisateur:{
@@ -131,14 +133,16 @@
                     avatar: null,
                     role: null
                 },
-                avatarData: param.imageDefautUser,
-                avatarData: null
+                avatarData: null,
+                message: null,
+
             }
         },
 
         created(){
             let utilisateurLocal = appService.getLocal();
             this.imageDefautUser = param.imageDefautUser;
+            this.avatarData = this.imageDefautUser;
 
 
             if(utilisateurLocal != null){
@@ -176,6 +180,7 @@
                 this.Membre = response.data;
                 console.log('Membre', this.Membre);
                 this.avatar = this.Membre.acf.logo;
+                this.avatarData = this.Membre.acf.logo.url;
             })
             .catch(error => console.log(error))
 
@@ -212,6 +217,7 @@
                 let params = new FormData();
                 params.append('username', this.MembreConnecte);
                 params.append('password', this.Membre.mdp);
+                this.message = null;
 
                 axios({
                     method : 'post',
@@ -267,7 +273,8 @@
                                         banniere:           this.Membre.acf.banniere,
                                         logo:               idAvatar,
                                         compte:             this.MembreConnecteID,
-                                        role:               this.MembreConnecteRole
+                                        role:               this.MembreConnecteRole,
+
                                     }
                                 },
                                 url: param.hostacf+'utilisateur/'+this.Membre.id,
@@ -285,43 +292,44 @@
                         console.log('erreur création media');
                         console.log(error);
                     })
-                    if(idAvatar == undefined){
-                        axios({
-                            method: 'post',
-                            data:{
-                                title : this.MembreConnecte,
-                                status : "publish",
-                                fields : {
-                                    nom :               this.Membre.acf.nom,
-                                    prenom :            this.Membre.acf.prenom,
-                                    pseudo :            this.MembreConnecte,
-                                    date_de_naissance:  this.Membre.acf.date_de_naissance,
-                                    mail:               this.MembreConnecteMail,
-                                    site_web:           this.Membre.acf.site_web,
-                                    instagram:          this.Membre.acf.instagram,
-                                    linkedin:           this.Membre.acf.linkedin,
-                                    youtube:            this.Membre.acf.youtube,
-                                    specialite:         this.Membre.acf.specialite,
-                                    promo:              this.Membre.acf.promo,
-                                    banniere:           this.Membre.acf.banniere,
-                                    logo:               this.idAvatar,
-                                    compte:             this.MembreConnecteID,
-                                    role:               this.MembreConnecteRole
-                                }
-                            },
-                            url: param.hostacf+'utilisateur/'+this.Membre.id,
-                            headers: { 'Authorization' : 'Bearer'+token}
 
-                        })
-                        .then(function(response){
-                            console.log("Retour modif Membre", response);
-                            this.$router.push('/compte/'+this.Membre.id);
-                        }.bind(this))
-                        .catch(error => console.log(error))
-                    }    
+                    axios({
+                        method: 'post',
+                        data:{
+                            title : this.MembreConnecte,
+                            status : "publish",
+                            fields : {
+                                nom :               this.Membre.acf.nom,
+                                prenom :            this.Membre.acf.prenom,
+                                pseudo :            this.MembreConnecte,
+                                date_de_naissance:  this.Membre.acf.date_de_naissance,
+                                mail:               this.MembreConnecteMail,
+                                site_web:           this.Membre.acf.site_web,
+                                instagram:          this.Membre.acf.instagram,
+                                linkedin:           this.Membre.acf.linkedin,
+                                youtube:            this.Membre.acf.youtube,
+                                specialite:         this.Membre.acf.specialite,
+                                promo:              this.Membre.acf.promo,
+                                banniere:           this.Membre.acf.banniere,
+                                logo:               this.idAvatar,
+                                compte:             this.MembreConnecteID,
+                                role:               this.MembreConnecteRole,
+                            }
+                        },
+                        url: param.hostacf+'utilisateur/'+this.Membre.id,
+                        headers: { 'Authorization' : 'Bearer'+token}
+
+                    })
+                    .then(function(response){
+                        console.log("Retour modif Membre", response);
+                        this.$router.push('/compte/'+this.Membre.id);
+                    }.bind(this))
+                    .catch(error => console.log(error))
+
+                    
                 }.bind(this))
                 .catch(error => 
-                    console.log(error)            
+                    this.message = param.message.errCnx
                 )
             
             },

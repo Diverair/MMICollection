@@ -11,7 +11,8 @@
 
     h4,
     h5,
-    .menu>ul>li>a{
+    .menu>ul>li>a,
+    .menu>ul>div>div>li>a{
         font-family: Montserrat, sans-serif;
         text-decoration: none;
     }
@@ -21,9 +22,9 @@
     span,
     i,
     label,
-    select, 
+    select,
     input,
-    option, 
+    option,
     textarea{
         font-family: "Cormorant Garamond", sans-serif;
         text-decoration: none;
@@ -47,6 +48,7 @@
 
     .footer-centre,
     .menu>ul>li,
+    .menu>ul>div>div>li,
     .text-center>*,
     .corps-page.mentions-legales>section>h2,
     .corps-page.mentions-legales>section>h3,
@@ -80,7 +82,8 @@
 
 
 @media (max-width: 1112px) {
-    .menu>ul>li>a{
+    .menu>ul>li>a,
+    .menu>ul>div>div>li>a{
         font-family: Bebas Neue, sans-serif;
     }
 }
@@ -116,7 +119,7 @@
     }
 
     button>*,
-    i, 
+    i,
     input,
     option, textarea{
         font-size: 24px;
@@ -152,7 +155,8 @@
 
 /* Tablette */
 @media (max-width: 1113px) {
-    .menu>ul>li>a{
+    .menu>ul>li>a,
+    .menu>ul>div>div>li>a{
         font-size: 40px;
     }
 
