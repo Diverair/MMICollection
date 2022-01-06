@@ -239,6 +239,7 @@ add_action('rest_api_init', function(){
 				$data[$i]['url'] = $acf['url'];
 				$data[$i]['logo'] = $acf['logo'];
 				$data[$i]['image'] = $acf['image'];
+				$data[$i]['visuel'] = $acf['visuel'];
 
 
 
@@ -332,6 +333,80 @@ add_action('rest_api_init', function(){
 				$data[$i]['projet'] = $acf['projet'];
 				$i++;
 			}
+			return $data;
+        }
+    ]);
+
+	register_rest_route('utilisateur/v11', '/listeUtilisateurs', [
+        'methods' => 'GET', // Methode d'interrogation
+        'callback' => function(){ // retout des résultats
+            $args = [
+				'numberposts' => 999999,
+				'post_type' => 'utilisateur'
+			];
+
+			$posts = get_posts($args);
+			$data = [];
+
+			$i = 0;
+
+			foreach ($posts as $post){
+				$data[$i]['id'] = $post -> ID;
+				$acf = get_fields($post -> ID);
+				$data[$i]['prenom'] = $acf['prenom'];
+				$data[$i]['nom'] = $acf['nom'];
+				$data[$i]['pseudo'] = $acf['pseudo'];
+				$data[$i]['mail'] = $acf['mail'];
+				$data[$i]['date_de_naissance'] = $acf['date_de_naissance'];
+				$data[$i]['site_web'] = $acf['site_web'];
+				$data[$i]['instagram'] = $acf['instagram'];
+				$data[$i]['linkedin'] = $acf['linkedin'];
+				$data[$i]['youtube'] = $acf['youtube'];
+				$data[$i]['banniere'] = $acf['banniere'];
+				$data[$i]['logo'] = $acf['logo'];
+				$data[$i]['role'] = $acf['role'];
+				$data[$i]['compte'] = $acf['compte'];
+				$data[$i]['promo'] = $acf['promo'];
+				$data[$i]['specialite'] = $acf['specialite'];
+				
+				$i++;
+			}	
+			return $data;
+		}
+	]);
+
+	register_rest_route('role_projet/v12', '/listeRolesProjet', [
+        'methods' => 'GET', // Methode d'interrogation
+        'callback' => function(){ // retout des résultats
+            $args = [
+				'numberposts' => 999999,
+				'post_type' => 'role_projet'
+			];
+
+			$posts = get_posts($args);
+			$data = [];
+
+			$i = 0;
+
+			foreach ($posts as $post){
+				$data[$i]['id'] = $post -> ID;
+				$acf = get_fields($post -> ID);
+				$data[$i]['utilisateur'] = $acf['utilisateur'];
+				$data[$i]['projet'] = $acf['projet'];
+
+				$roles = [];
+				$j = 0;
+				if(is_array($acf['role'])){
+					foreach($acf['role'] as $role){
+						$roles[$j]['id'] = $role->ID;
+						$j++;
+					}
+				}
+				$data[$i]['role'] = $roles;
+
+				$i++;
+			}
+			usort($data, "cmpNom");
 			return $data;
         }
     ]);

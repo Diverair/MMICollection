@@ -12,7 +12,7 @@
     h4,
     h5,
     .menu>ul>li>a,
-    .menu>ul>div>div>li>a{
+    .menu>ul>li>div>div>a{
         font-family: Montserrat, sans-serif;
         text-decoration: none;
     }
@@ -83,7 +83,7 @@
 
 @media (max-width: 1112px) {
     .menu>ul>li>a,
-    .menu>ul>div>div>li>a{
+    .menu>ul>li>div>div>a{
         font-family: Bebas Neue, sans-serif;
     }
 }
@@ -156,7 +156,7 @@
 /* Tablette */
 @media (max-width: 1113px) {
     .menu>ul>li>a,
-    .menu>ul>div>div>li>a{
+    .menu>ul>li>div>div>a{
         font-size: 40px;
     }
 

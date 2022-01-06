@@ -17,6 +17,7 @@
         h5,
         p,
         a,
+        a.visited,
         span{
             color: #FAFAFA;
         }
@@ -62,11 +63,12 @@
 
             .section.accueil>.block-text,
             .choix>a,
-            .choix>div>div,
             .carrousel>li>p,
+            .choix>div>div,
             .cadre-connexion,
             .button,
-            .btn-upload{
+            .btn-upload,
+            li.appreciation>div>div>div>p{
                 background-color: #656565;
             }
 
@@ -104,7 +106,6 @@
 
 
         /* Box-shadow */
-            .carrousel>li>p,
             #cadre-connexion,
             #visuels-projet-grand>ul>li>img:hover{
                 box-shadow: #545454 0 0 10px;
@@ -164,6 +165,7 @@
             h6,
             p,
             a,
+            a:visited,
             span{
                 color: #060606;
             }
@@ -180,6 +182,17 @@
 
             .blue{
                 color: darkcyan;
+            }
+
+            footer>div>section>div>a,
+            footer>div>address>p,
+            footer>div>address>a,
+            footer>div>section>select,
+            #langue-select-tel,
+            footer>div>a,
+            footer>div>address>a:visited,
+            footer>div>a:visited{
+                color: #FAFAFA;
             }
 
 
@@ -204,12 +217,13 @@
 
             .section.accueil>.block-text,
             .choix>a,
-            .carrousel>li>p ,
+            .choix>div>div,
             .cadre-connexion,
             .profil,
             .role-utilisateur,
             .barre-nav-utilisateur,
-            .btn-upload{
+            .btn-upload,
+            li.appreciation>div>div>div>p{
                 background-color: #EFEFEF;
             }
 
@@ -219,8 +233,7 @@
 
             .bouton-menu-bar,.bouton-menu-bar::before,.bouton-menu-bar::after,
             .menu-open .bouton-menu-bar,
-            .menu-open .bouton-menu-bar::before, .menu-open .bouton-menu-bar::after,
-            {
+            .menu-open .bouton-menu-bar::before, .menu-open .bouton-menu-bar::after{
                 background-color: #353535;
             }
 
@@ -252,8 +265,6 @@
 
 
         /* Box-shadow */
-            .choix>a:hover,
-            .carrousel>li>p,
             #cadre-connexion,
             #visuels-projet-grand>ul>li>img:hover{
                 box-shadow: #545454 0 0 15px;
@@ -364,7 +375,7 @@
         }
 
         .filtres{
-            border-right:  #707070 1px solid;
+            border-color:  #707070;
         }
 
         .filtres>h5,

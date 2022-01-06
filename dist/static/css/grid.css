@@ -26,7 +26,7 @@
 }
 
 .contenu.contenu-accueil>.choix{
-    width: calc(4 * 300px + 3 * 25px);
+    width: calc(4 * 300px + 5 * 25px);
     height: max-content;
     display: grid;
     grid: auto-flow max-content / repeat(4, 300px);
@@ -48,13 +48,6 @@
     border-radius: 20px;
     overflow: hidden;
     text-align: center;
-}
-
-@media (max-width : 400px) {
-    .choix>a{
-        transform: translateX(-9%);
-
-    }
 }
 
 .contenu.contenu-accueil>section>a>div{
@@ -258,6 +251,7 @@
         height: max-content;
         display: grid;
         grid: auto-flow max-content / 300px;
+        grid-gap: 25px;
         padding: 25px 0;
         margin: auto;
     }

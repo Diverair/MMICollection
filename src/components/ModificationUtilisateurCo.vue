@@ -31,7 +31,7 @@
         <section>
             <br><label for="avatar">Avatar</label>
             <div  class="previsualisationAvatar">
-                <img :src="avatarData" class="preview" alt="Previsualisation de l'avatar">
+                <img :src="avatarData" class="preview" aspect-ratio="1/1" alt="Previsualisation de l'avatar">
             </div>
             <i>Taille 1/1</i>
             <br><input type="file" ref="file" id="avatar" @change="previewAvatar">
@@ -60,17 +60,17 @@
         <section v-if="MembreConnecteRole == 'author' || MembreConnecteRole == 'editor' || MembreConnecteRole == 'administrator'">
             <label for="specialite">Votre spécialité</label>
             <br>
-            <select name="specialite" id="specialite" v-model="Membre.acf.specialite">
-                <option value="null">Aucune</option>
-                optio
-                <option v-for="specialite in listeOrderByName" :key="specialite.acf.id" :value="specialite.id">{{specialite.acf.nom}}</option>
+            <select v-model="speSelected" title="specialite" id="specialite">
+                <option value="0">Aucune</option>
+                <option v-for="specialite in listeOrderByName" :key="specialite.id" :value="specialite.id">{{specialite.acf.nom}}</option>
             </select>
         </section>
-        <section v-if="MembreConnecteRole == 'author'">
+        <section v-if="MembreConnecteRole == 'author' || MembreConnecteRole == 'editor'">
             <label for="promotion">Votre Promotion</label>
-            <br><select name="promotion" id="promotion" v-model="Membre.acf.promo">
-                <option :value="null">Aucune</option>
-                <option :value="promo.id" v-for="promo in listeOrderByDate" :key="promo.id">{{promo.nom}}</option>
+            <br>
+            <select v-model="promoSelected" title="Promos" id="promotion">
+                <option value="0">Aucune</option>
+                <option v-for="promo in listeOrderByDate" :key="promo.id" :value="promo.id">{{promo.nom}}</option>
             </select>
         </section>
         <section>
@@ -135,7 +135,8 @@
                 },
                 avatarData: null,
                 message: null,
-
+                promoSelected: 0,
+                speSelected: 0
             }
         },
 
@@ -181,6 +182,12 @@
                 console.log('Membre', this.Membre);
                 this.avatar = this.Membre.acf.logo;
                 this.avatarData = this.Membre.acf.logo.url;
+                this.speSelected = this.Membre.acf.specialite[0].ID;
+                console.log("spe membre", this.Membre.acf.specialite[0].ID)
+                this.promoSelected = this.Membre.acf.promo[0].ID;
+
+                let d = this.Membre.acf.date_de_naissance.split("/");
+                this.Membre.acf.date_de_naissance = d[2]+"-"+d[1]+"-"+d[0]
             })
             .catch(error => console.log(error))
 
