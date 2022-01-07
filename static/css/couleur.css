@@ -1,0 +1,409 @@
+/* Thème Sombre */
+    @media (prefers-color-scheme: dark){
+        /* Police */
+        h1{
+            color: #fff;
+        }
+
+        h2{
+            color: #F2F2F2;
+        }
+
+        h3{
+            color: #DDDDDD;
+        }
+
+        h4,
+        h5,
+        p,
+        a,
+        a.visited,
+        span{
+            color: #FAFAFA;
+        }
+
+        h6,
+        i,
+        b{
+            color: #DCDCDC;
+        }
+
+        .pink{
+            color:#F573D2;
+        }
+
+        .blue{
+            color: #6196e2;
+        }
+
+
+        /* Border color */
+            .fond-avatar{
+                border-color: #242424;
+            }
+
+            .barre-nav-utilisateur>div,
+            .btn-upload{
+                border-color: #121212;
+            }
+
+        /* Background-color */
+            .fond,
+            .inscription>section>label{
+                background-color: #121212;
+            }
+
+           
+
+            .profil,
+            .role-utilisateur,
+            .barre-nav-utilisateur{
+                background-color: #242424;
+            }
+
+            .section.accueil>.block-text,
+            .choix>a,
+            .carrousel>li>p,
+            .choix>div>div,
+            .cadre-connexion,
+            .button,
+            .btn-upload,
+            li.appreciation>div>div>div>p{
+                background-color: #656565;
+            }
+
+            .bouton-menu-bar,.bouton-menu-bar::before,.bouton-menu-bar::after,
+            .menu-open .bouton-menu-bar,
+            .menu-open .bouton-menu-bar::before, .menu-open .bouton-menu-bar::after{
+                background-color: #CACACA;
+            }
+
+            header,
+            .menu,
+            #connexion,
+            #visuels-projet-grand>ul,
+            .complementInscription,
+            .complementInscription>div>form>section>label,
+            .msgerror,
+            .ModalBanniere{
+                background-color: rgba(20, 20, 20, 0.7);
+            }
+
+            @media (max-width: 1112px) {
+                .section.accueil>.block-text{
+                    background-color: #00000000;
+                }
+            }
+
+            @media (min-width: 1113px) {
+                .menu{
+                    background-color: rgba(70, 70, 70, 1);
+                }
+            }
+
+
+
+
+
+        /* Box-shadow */
+            #cadre-connexion,
+            #visuels-projet-grand>ul>li>img:hover{
+                box-shadow: #545454 0 0 10px;
+            }
+
+            @media (max-width: 1112px) {
+                .section.accueil>.block-text{
+                    box-shadow: none;
+                }
+            }
+
+
+
+
+
+        /* SVG */
+            .color-objet{
+                fill: #CACACA;
+                stroke: #CACACA;
+            }
+
+            .color-objet-fill{
+                fill: #CACACA;
+            }
+
+            .color-objet-stroke{
+                stroke: #CACACA;
+            }
+    }
+
+
+
+
+
+
+
+
+
+
+/* Theme Clair */
+    @media (prefers-color-scheme: light){
+        /* Police */
+            h1{
+                color: #000;
+            }
+
+            h2{
+                color: #080808;
+            }
+
+            h3{
+                color: #333333;
+            }
+
+            h4,
+            h5,
+            h6,
+            p,
+            a,
+            a:visited,
+            span{
+                color: #060606;
+            }
+
+            h6,
+            i,
+            b{
+                color: #545454;
+            }
+
+            .pink{
+                color:#BF5AA4;
+            }
+
+            .blue{
+                color: darkcyan;
+            }
+
+            footer>div>section>div>a,
+            footer>div>address>p,
+            footer>div>address>a,
+            footer>div>section>select,
+            #langue-select-tel,
+            footer>div>a,
+            footer>div>address>a:visited,
+            footer>div>a:visited{
+                color: #FAFAFA;
+            }
+
+
+        /* Border color */
+             .fond-avatar{
+                border-color: #FBFBFB;
+            }
+
+            .barre-nav-utilisateur>div,
+            .btn-upload{
+                border-color: #EFEFEF;
+            }
+
+
+
+
+        /* Background-color */
+            .fond,
+            .inscription>section>label{
+                background-color: #FBFBFB;
+            }
+
+            .section.accueil>.block-text,
+            .choix>a,
+            .choix>div>div,
+            .cadre-connexion,
+            .profil,
+            .role-utilisateur,
+            .barre-nav-utilisateur,
+            .btn-upload,
+            li.appreciation>div>div>div>p{
+                background-color: #EFEFEF;
+            }
+
+            .fond-avatar{
+                border-color: #EFEFEF;
+            }
+
+            .bouton-menu-bar,.bouton-menu-bar::before,.bouton-menu-bar::after,
+            .menu-open .bouton-menu-bar,
+            .menu-open .bouton-menu-bar::before, .menu-open .bouton-menu-bar::after{
+                background-color: #353535;
+            }
+
+            header,
+            .menu,
+            #connexion,
+            #visuels-projet-grand>ul,
+            .complementInscription,
+            .complementInscription>div>form>section>label,
+            .msgerror,
+            .ModalBanniere{
+                background-color: rgba(203, 203, 203, 0.7);
+            }
+
+            @media (max-width: 1112px) {
+                .section.accueil>.block-text {
+                    background-color: #00000000;
+                }
+            }
+
+            @media (min-width: 1113px) {
+                .menu{
+                    background-color: rgba(243, 243, 243, 1);
+                }
+            }
+
+
+
+
+
+        /* Box-shadow */
+            #cadre-connexion,
+            #visuels-projet-grand>ul>li>img:hover{
+                box-shadow: #545454 0 0 15px;
+            }
+
+            @media (max-width: 1112px) {
+                .section.accueil>.block-text{
+                    box-shadow: none;
+                }
+            }
+
+
+
+
+
+
+        /* SVG */
+            .color-objet{
+                fill: #353525;
+                stroke: #353535;
+            }
+
+            .color-objet-fill{
+                fill: #353525;
+            }
+
+            .color-objet-stroke{
+                stroke: #353535;
+                fill: none;
+            }
+    }
+
+
+
+
+
+
+
+
+
+
+/* Tous thème */
+    /* Footer */
+        footer{
+            background-color: #2F2F2F;
+        }
+
+        footer>div>section>div>a,
+        footer>div>address>p,
+        footer>div>address>a,
+        footer>div>section>select,
+        #langue-select-tel,
+        footer>div>a{
+            color: #FAFAFA;
+        }
+
+        .color-objet-stroke-footer{
+            stroke: #FAFAFA;
+        }
+
+        .text-footer>section>select,
+        #langue-select-tel{
+            border: 1px #FAFAFA solid;
+            background-color: #2F2F2F;
+        }
+
+
+    /* Autre élément */
+        .fond-avatar{
+            background-color: #FAFAFA;
+        }
+
+        button{
+            background-color: #BF5AA4;
+        }
+
+        .red{
+            background-color: red;
+            border-color: red;
+        }
+
+        button>a{
+            color: #FAFAFA;
+        }
+
+        
+        .haut-page.accueil>h1{
+            color: #BF5AA4;
+        }
+
+        .flechebouton{
+            fill: #FAFAFA;
+        }
+
+        hr{
+            background-color: #BF5AA4;
+            border: #BF5AA4 1px solid;
+        }
+
+        input[type="checkbox"]:checked,
+        nav{
+            background-color: #BF5AA4;
+        }
+
+        hr.hr-simple{
+            background-color: #707070;
+            border: 0;
+        }
+
+        .filtres{
+            border-color:  #707070;
+        }
+
+        .filtres>h5,
+        .categorie-filtres,
+        .barre-info.ordi{
+            border-bottom: #707070 1px solid;
+        }
+
+        .categorie-filtres:last-of-type{
+            border-bottom: none;
+        }
+
+
+        .color-objet-fill-red{
+            fill: red;
+        }
+        
+
+        .fermetureConnexion,
+        .BGtransparent{
+            background-color: #DDDDDD00;
+            border-color: #DDDDDD00;
+        }
+
+        .orange{
+            color: #cd8521;
+        }
+
+        .color-red{
+            color:red;
+        }
