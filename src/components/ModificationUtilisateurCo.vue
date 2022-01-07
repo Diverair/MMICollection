@@ -221,85 +221,85 @@
             },
 
             modif: function(){
-                let params = new FormData();
-                params.append('username', this.MembreConnecte);
-                params.append('password', this.Membre.mdp);
-                this.message = null;
+                let idAvatar = undefined;
+            let params = new FormData();
+            params.append('username', this.MembreConnecte);
+            params.append('password', this.Membre.mdp);
+
+            axios({
+                method : 'post',
+                url : param.auth+'token',
+                data : params
+            })
+            .then(function (response){
+                let token = response.data.token;
+
+                const formDataAvatar = new FormData();
+                let avatarfile = document.querySelector('#avatar');
+                formDataAvatar.append("title", this.MembreConnecteID+"Avatar");
+                formDataAvatar.append('file', this.avatar);
+                formDataAvatar.append("status", 'publish');
+
+                let headers = {
+                    'Authorization' : 'Bearer' + token,
+                    'Content-Type' : 'multipart/form-data'
+                }
 
                 axios({
-                    method : 'post',
-                    url : param.auth+'token',
-                    data : params
+                    method: 'post', 
+                    url : param.hostacf+'media', 
+                    data: formDataAvatar,
+                    headers:headers
                 })
                 .then(function (response){
-                    let token = response.data.token;
+                    console.log('retour upload image', response);
+                    
 
-                    const formDataAvatar = new FormData();
-                    let avatarfile = document.querySelector('#avatar');
-                    formDataAvatar.append("title", this.MembreConnecte+"Avatar");
-                    formDataAvatar.append('file', this.avatar);
-                    formDataAvatar.append("status", 'publish');
+                    let idAvatar = response.data.id;
+                    console.log('idImage', idAvatar);
+                    let urlAvatar = response.data.source_url;
+                    console.log('url Image', urlAvatar);
 
-                    let headers = {
-                        'Authorization' : 'Bearer' + token,
-                        'Content-Type' : 'multipart/form-data'
+                    if(idAvatar != undefined){
+                        axios({
+                            method: 'post',
+                            data:{
+                                title : this.MembreConnecte,
+                                status : "publish",
+                                fields : {
+                                    nom :               this.Membre.acf.nom,
+                                    prenom :            this.Membre.acf.prenom,
+                                    pseudo :            this.MembreConnecte,
+                                    date_de_naissance:  this.Membre.acf.date_de_naissance,
+                                    mail:               this.MembreConnecteMail,
+                                    site_web:           this.Membre.acf.site_web,
+                                    instagram:          this.Membre.acf.instagram,
+                                    linkedin:           this.Membre.lacf.inkedin,
+                                    youtube:            this.Membre.acf.youtube,
+                                    specialite:         this.speSelected,
+                                    promo:              this.promoSelected,
+                                    banniere:           this.Membre.acf.banniere,
+                                    logo:               this.idAvatar,
+                                    compte:             this.MembreConnecteID,
+                                    role:               this.MembreConnecteRole,
+                                }
+                            },
+                            url: param.hostacf+'utilisateur/'+this.Membre.id,
+                            headers: { 'Authorization' : 'Bearer'+token}
+                        })
+                        .then(function(response){
+                            this.$router.push('/compte/'+this.Membre.id);
+                            location.reload();
+                        }.bind(this))
+                        .catch(error => console.log(error))
                     }
+                }
+                .bind(this))
+                .catch(error => {
+                    console.log(error);
+                })
 
-                    axios({
-                        method: 'post', 
-                        url : param.hostacf+'media', 
-                        data: formDataAvatar,
-                        headers:headers
-                    })
-                    .then(function (response){
-                        console.log('retour upload image', response);
-
-                        let idAvatar = response.data.id;
-                        console.log('idImage', idAvatar);
-                        let urlAvatar = response.data.source_url;
-                        console.log('url Image', urlAvatar);
-
-                        if(idAvatar != undefined){
-                            axios({
-                                method: 'post',
-                                data:{
-                                    title : this.MembreConnecte,
-                                    status : "publish",
-                                    fields : {
-                                        nom :               this.Membre.acf.nom,
-                                        prenom :            this.Membre.acf.prenom,
-                                        pseudo :            this.MembreConnecte,
-                                        date_de_naissance : this.Membre.acf.date_de_naissance,
-                                        mail:               this.MembreConnecteMail,
-                                        site_web:           this.Membre.acf.site_web,
-                                        instagram:          this.Membre.acf.instagram,
-                                        linkedin:           this.Membre.acf.linkedin,
-                                        youtube:            this.Membre.acf.youtube,
-                                        specialite:         this.Membre.acf.specialite,
-                                        promo:              this.Membre.acf.promo,
-                                        banniere:           this.Membre.acf.banniere,
-                                        logo:               idAvatar,
-                                        compte:             this.MembreConnecteID,
-                                        role:               this.MembreConnecteRole,
-
-                                    }
-                                },
-                                url: param.hostacf+'utilisateur/'+this.Membre.id,
-                                headers: { 'Authorization' : 'Bearer'+token}
-                            })
-                            .then(function(response){
-                                console.log("Retour création Membre", response);
-                                this.$router.push('/compte/'+this.Membre.id);
-                            }.bind(this))
-                            .catch(error => console.log(error))
-                        }
-                    }
-                    .bind(this))
-                    .catch(error => {
-                        console.log('erreur création media');
-                        console.log(error);
-                    })
-
+                if(idAvatar == undefined){
                     axios({
                         method: 'post',
                         data:{
@@ -315,12 +315,13 @@
                                 instagram:          this.Membre.acf.instagram,
                                 linkedin:           this.Membre.acf.linkedin,
                                 youtube:            this.Membre.acf.youtube,
-                                specialite:         this.Membre.acf.specialite,
-                                promo:              this.Membre.acf.promo,
+                                specialite:         this.speSelected,
+                                promo:              this.promoSelected,
                                 banniere:           this.Membre.acf.banniere,
-                                logo:               this.idAvatar,
+                                logo:               this.Membre.acf.logo,
                                 compte:             this.MembreConnecteID,
                                 role:               this.MembreConnecteRole,
+                                
                             }
                         },
                         url: param.hostacf+'utilisateur/'+this.Membre.id,
@@ -328,18 +329,17 @@
 
                     })
                     .then(function(response){
-                        console.log("Retour modif Membre", response);
                         this.$router.push('/compte/'+this.Membre.id);
+                        location.reload();
                     }.bind(this))
                     .catch(error => console.log(error))
-
-                    
-                }.bind(this))
-                .catch(error => 
-                    this.message = param.message.errCnx
-                )
-            
-            },
+                }
+                
+            }.bind(this))
+            .catch(error => 
+                console.log(error)            
+            )
+            }
         },
         
         computed:{

@@ -304,8 +304,18 @@ add_action('rest_api_init', function(){
 					}
 				}
 
+				$visuels = [];
+				$p = 0;
+				if(is_array($acf['visuel'])){
+					foreach($acf['visuel'] as $visuel){
+						$visuels[$j]['id'] = $visuel->ID;
+						$p++;
+					}
+				}
+				$data[$p]['visuels'] = $visuels;    
+
 				$data[$i]['appreciation'] = $appreciations;
-				$i++;        	
+				$i++; 	
 			}	
 			return $data;
 		}
